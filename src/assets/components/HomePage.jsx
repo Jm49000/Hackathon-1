@@ -15,7 +15,7 @@ export default function HomePage() {
       <div className="uranus" />
       <div className="neptune" />
       <div className="asteroid-belt" />
-      <Link to="" className="animated-button1">
+      <Link to="/wildearthO" className="animated-button1">
         <span></span>
         <span></span>
         <span></span>

@@ -1,12 +1,11 @@
-import "../pages/sass/MainComponent.scss";
+import "../components/sass/MainComponent.scss";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
 export default function MainComponent() {
   const [arrayIq, setArrayIq] = useState([]);
   const [filter, setFilter] = useState("");
-  const [mode, setMode] = useState("");
-  console.log(setFilter);
+  //   const [mode, setMode] = useState("");
   function getArrayIq() {
     const air = [];
     axios
@@ -40,12 +39,10 @@ export default function MainComponent() {
   //     }
   //   }, [filter]);
   function handleKeyDown(e) {
-    console.log(e.target.value);
     if (e.key === "Enter") {
       setFilter(e.target.value);
     }
   }
-  console.log(setFilter);
   return (
     <section>
       <div className="search">
