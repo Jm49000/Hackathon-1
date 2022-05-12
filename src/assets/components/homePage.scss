@@ -1,16 +1,4 @@
-// $year-in-second : 30;
-
-// $sun:40px;
-// $mercury-orb: 70px; $mercury-pl:4px;
-// $venus-orb:100px; $mercury-pl:8px;
-// $earth-orb:145px; $earth-pl: 6px;
-// $mars-orb: 190px; $mars-pl: 6px;
-// $jupiter-orb: 340px; $jupiter-pl: 18px;
-// $saturn-orb: 440px; $saturn-pl: 12px;
-// $uranus-orb: 520px; $uranus-pl: 10px;
-// $neptune-orb: 630px; $neptune-pl: 10px;
-// $pluto-orb:780px; $pluto-pl: 3px;
-$year-in-second: 30; // 1 Earth year = 30 sec
+$year-in-second: 10; // 1 Earth year = 30 sec
 
 @function revolution($pl-year-in-days) {
   @return $pl-year-in-days * $year-in-second / 365.2563 + s //Earth reference
@@ -112,31 +100,6 @@ body {
       }
     }
   }
-
-//   .buttonEntry {
-//       position: absolute;
-//       top: 50%;
-//       left: 50%;
-//       transform: translate(-50%, -50%);
-//       z-index: 999;
-//       border-radius: 10px;
-//       width: 10%;
-//       height: 5%;
-//       opacity: 70%;
-//       background: #000;
-//       animation: crescendo 1.5s alternate infinite ease-in;
-
-//     @keyframes crescendo {
-//       0%   {transform: scale(.8);}
-//       100% {transform: scale(1.5);}
-//     }
-//   }
-//   .boutonContact{
-//       position: absolute;
-//       top:90%;
-//       left: 50%;
-//       transform: translate(-50%, -50%);
-//   }
 }
 
 .sun {

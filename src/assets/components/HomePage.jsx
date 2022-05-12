@@ -22,7 +22,14 @@ export default function HomePage() {
         <span></span>
         Entrez sur le site
       </Link>
-      <button type="button">Nous contacter</button>
+
+      <Link to="" className="buttonContact">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Nous contacter
+      </Link>
     </div>
   );
 }
