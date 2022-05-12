@@ -1,5 +1,5 @@
 import "./App.css";
-
+import HomePage from "@assets/components/HomePage";
 export default function App() {
-  return <h1>Hello Vite React App</h1>;
+  return <HomePage />;
 }
