@@ -3,11 +3,7 @@
   text-align: center;
 }
 
-nav a {
-  padding: 10px;
-  text-decoration: none;
-}
-
-nav a.active {
-  text-decoration: underline;
+body {
+  margin: 0;
+  background-color: #101011;
 }
