@@ -46,14 +46,6 @@ $asteroids-belt-pl: 210px;
   margin: 0;
   box-sizing: border-box;
 }
-html,
-body {
-//   overflow: clip;
-//   min-height: 100vh;
-//   min-width: 100vw;
-//   max-height: 100vh;
-//   max-width: 100vw;
-}
 
 body {
   font: normal 1em/1.45em "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -286,7 +278,7 @@ body {
     margin-top: -$asteroids-belt-pl / 2;
     background: transparent;
     border-radius: 140px !important;
-    box-shadow: stars(390, 290, -290/2, -104);
+    // box-shadow: stars(390, 290, -290, -104);
   }
 }
 

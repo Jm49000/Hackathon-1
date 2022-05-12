@@ -23,7 +23,7 @@ export default function HomePage() {
         Entrez sur le site
       </Link>
 
-      <Link to="" className="buttonContact">
+      <Link to="/contact" className="buttonContact">
         <span></span>
         <span></span>
         <span></span>

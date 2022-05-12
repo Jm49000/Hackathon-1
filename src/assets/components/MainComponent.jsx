@@ -1,11 +1,10 @@
 import "../components/sass/MainComponent.scss";
 import { useState, useEffect } from "react";
 import axios from "axios";
-
+import Modal from "./Modal";
 export default function MainComponent() {
   const [arrayIq, setArrayIq] = useState([]);
   const [filter, setFilter] = useState("");
-  //   const [mode, setMode] = useState("");
   function getArrayIq() {
     const air = [];
     axios
@@ -27,17 +26,8 @@ export default function MainComponent() {
       });
   }
   useEffect(() => {
-    if (filter) {
-      getArrayIq();
-    }
+    getArrayIq();
   }, [filter]);
-  //   useEffect(() => {
-  //     if (filter === "") {
-  //       setMode("");
-  //     } else {
-  //       setMode("name");
-  //     }
-  //   }, [filter]);
   function handleKeyDown(e) {
     if (e.key === "Enter") {
       setFilter(e.target.value);
@@ -49,7 +39,7 @@ export default function MainComponent() {
         <input
           type="text"
           name="name"
-          placeholder="Tapez ici votre ville"
+          placeholder="Tapez ici votre ville et appuiyez sur entrer"
           onKeyPress={handleKeyDown}
         />
       </div>
@@ -67,6 +57,11 @@ export default function MainComponent() {
           <div class="inner-shadow"></div>
         </div>
       </div>
+      <ul>
+        {arrayIq.map((item) => {
+          return <Modal key={item} />;
+        })}
+      </ul>
     </section>
   );
 }
