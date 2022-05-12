@@ -1,0 +1,9 @@
+*{
+    box-sizing: border-box;
+}
+
+.modal-city{
+    max-width: fit-content;
+    font-size: 3rem;
+    padding-left: 10px;
+}
