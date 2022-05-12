@@ -1,5 +1,6 @@
 import "./ContactForm.scss";
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
 
 const ContactForm = () => {
   const [inputs, setInputs] = useState({});
@@ -17,6 +18,7 @@ const ContactForm = () => {
 
   return (
     <>
+    <Link to="/contact" className="contact">
     <section>
     <div className="title">Contactez Nous</div>
     <form onSubmit={handleSubmit}>  
@@ -38,7 +40,7 @@ const ContactForm = () => {
         </label>
       <label>Entrez votre message:
         <input 
-          type="message" 
+          type="textearea" 
           name="message" 
           value={inputs.message || ""} 
           onChange={handleChange}
@@ -47,6 +49,7 @@ const ContactForm = () => {
         <input type="submit" />
     </form>
     </section>
+    </Link>
     </>
   )
 }
