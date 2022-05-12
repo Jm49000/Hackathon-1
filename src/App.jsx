@@ -1,6 +1,5 @@
 import "./App.css";
-import MainComponent from "@components/MainComponent";
-
+import HomePage from "@assets/components/HomePage";
 export default function App() {
-  return <MainComponent />;
+  return <HomePage />;
 }
