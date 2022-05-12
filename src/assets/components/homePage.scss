@@ -112,6 +112,31 @@ body {
       }
     }
   }
+
+//   .buttonEntry {
+//       position: absolute;
+//       top: 50%;
+//       left: 50%;
+//       transform: translate(-50%, -50%);
+//       z-index: 999;
+//       border-radius: 10px;
+//       width: 10%;
+//       height: 5%;
+//       opacity: 70%;
+//       background: #000;
+//       animation: crescendo 1.5s alternate infinite ease-in;
+
+//     @keyframes crescendo {
+//       0%   {transform: scale(.8);}
+//       100% {transform: scale(1.5);}
+//     }
+//   }
+//   .boutonContact{
+//       position: absolute;
+//       top:90%;
+//       left: 50%;
+//       transform: translate(-50%, -50%);
+//   }
 }
 
 .sun {
@@ -299,21 +324,6 @@ body {
     background: transparent;
     border-radius: 140px !important;
     box-shadow: stars(390, 290, -290/2, -104);
-  }
-}
-
-.pluto {
-  height: $pluto-orb;
-  width: $pluto-orb;
-  margin-top: -$pluto-orb / 2 + -60;
-  margin-left: -$pluto-orb / 2 + 70;
-  animation: orb revolution(90580) linear infinite;
-  &:before {
-    height: $pluto-pl;
-    width: $pluto-pl;
-    background: #fff;
-    margin-top: -$pluto-pl / 2;
-    margin-left: -$pluto-pl / 2;
   }
 }
 

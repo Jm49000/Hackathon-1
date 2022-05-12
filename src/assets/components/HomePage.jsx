@@ -1,19 +1,28 @@
 import "./homePage.scss";
+import "./button.css";
+import { Link } from "react-router-dom";
 
 export default function HomePage() {
   return (
-    <div class="solar-syst">
-      <div class="sun"></div>
-      <div class="mercury"></div>
-      <div class="venus"></div>
-      <div class="earth"></div>
-      <div class="mars"></div>
-      <div class="jupiter"></div>
-      <div class="saturn"></div>
-      <div class="uranus"></div>
-      <div class="neptune"></div>
-      <div class="pluto"></div>
-      <div class="asteroids-belt"></div>
+    <div className="solar-syst">
+      <div className="sun" />
+      <div className="mercury" />
+      <div className="venus" />
+      <div className="earth" />
+      <div className="mars" />
+      <div className="jupiter" />
+      <div className="saturn" />
+      <div className="uranus" />
+      <div className="neptune" />
+      <div className="asteroid-belt" />
+      <Link to="" className="animated-button1">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+        Entrez sur le site
+      </Link>
+      <button type="button">Nous contacter</button>
     </div>
   );
 }
