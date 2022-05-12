@@ -1,4 +1,4 @@
-import "./ContactForm.scss";
+import "./ContactForm.css";
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 
@@ -18,7 +18,7 @@ const ContactForm = () => {
 
   return (
     <>
-    <Link to="/contact" className="contact">
+  
     <section>
     <div className="title">Contactez Nous</div>
     <form onSubmit={handleSubmit}>  
@@ -49,7 +49,7 @@ const ContactForm = () => {
         <input type="submit" />
     </form>
     </section>
-    </Link>
+   
     </>
   )
 }
