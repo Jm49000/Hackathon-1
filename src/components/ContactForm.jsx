@@ -1,56 +1,46 @@
 import "./ContactForm.scss";
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react'
 
 const ContactForm = () => {
-  const [inputs, setInputs] = useState({});
 
-  const handleChange = (event) => {
-    const name = event.target.name;
-    const value = event.target.value;
-    setInputs(values => ({...values, [name]: value}))
-  }
-
-  const handleSubmit = (event) => {
-    event.preventDefault();
-    console.log(inputs);
-  }
-
-  return (
-    <>
-    {/* <Link to="/contact" className="contact"> */}
-    <section>
-    <div className="title">Contactez Nous</div>
-    <form onSubmit={handleSubmit}>  
-      <label>Entrez votre nom:
-      <input 
-        type="text" 
-        name="username" 
-        value={inputs.username || ""} 
-        onChange={handleChange}
-      />
-      </label>
-      <label>Entrez votre email:
-        <input 
-          type="email" 
-          name="email" 
-          value={inputs.email || ""} 
-          onChange={handleChange}
-        />
-        </label>
-      <label>Entrez votre message:
-        <input 
-          type="textearea" 
-          name="message" 
-          value={inputs.message || ""} 
-          onChange={handleChange}
-        />
-        </label>
-        <input type="submit" />
-    </form>
-    </section>
-   {/*  </Link> */}
-    </>
-  )
+    
+    return (
+        
+        <form>
+        <div className="formulaire">
+          <div className="tete-formulaire">
+            <img src="assets/Planet-Earth.png" alt="Planete Terre" />
+            <h1>Nous contacter</h1>
+            <div className="question">
+              <h2>Une question ? Nous sommes là pour y répondre.</h2>
+            </div>
+          </div>
+          <p className="info-perso">Informations personnelles :</p>
+          <div className="identite">
+            <div className="boite-1">
+              <label className="label-style">Prénom </label>
+              <label className="label-style">Nom</label>
+            </div>
+            <div className="boite-2">
+              <input placeholder="ex : Jean" type="text" required/>
+              <input placeholder="ex : Dubois" type="text" required/>
+            </div>
+          </div>
+          <div className="mail">
+            <label>Email *</label>
+            <input placeholder="ex : jeandubois@gmail.com" type="text"  required/>
+          </div>
+          <div className="pied-formulaire">
+            <div className="message">
+              <label>Message</label>
+              <textarea placeholder="Ecrivez votre message ici"></textarea>
+            </div>
+            <div className="bouton">
+              <button>Envoyer</button>
+            </div>
+          </div>
+        </div>
+      </form>
+    );
 }
 export default ContactForm;
