@@ -1,5 +1,12 @@
 import "./App.css";
-import HomePage from "@assets/components/HomePage";
+import MainComponent from "@components/MainComponent";
+import { Routes, Route } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom";
+
 export default function App() {
-  return <HomePage />;
+  return (
+    <BrowserRouter>
+      <Route path="/" element={<MainComponent />} />
+    </BrowserRouter>
+  );
 }

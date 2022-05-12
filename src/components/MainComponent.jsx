@@ -1,0 +1,75 @@
+import "../pages/sass/MainComponent.scss";
+import { useState, useEffect } from "react";
+import axios from "axios";
+
+export default function MainComponent() {
+  const [arrayIq, setArrayIq] = useState([]);
+  const [filter, setFilter] = useState("");
+  const [mode, setMode] = useState("");
+  console.log(setFilter);
+  function getArrayIq() {
+    const air = [];
+    axios
+      .get("https://api.ambeedata.com/latest/by-city", {
+        headers: {
+          "X-Api-Key":
+            "c0695f0197833d008c8c3d32d8231cb1450fc49767a15684e482858c601ba1d0",
+          "Content-type": "application/json",
+        },
+        params: {
+          city: filter,
+        },
+      })
+      .then((response) => response.data)
+      .then((data) => {
+        console.log(data);
+        air.push(data.stations[0]);
+        setArrayIq(air);
+      });
+  }
+  useEffect(() => {
+    if (filter) {
+      getArrayIq();
+    }
+  }, [filter]);
+  //   useEffect(() => {
+  //     if (filter === "") {
+  //       setMode("");
+  //     } else {
+  //       setMode("name");
+  //     }
+  //   }, [filter]);
+  function handleKeyDown(e) {
+    console.log(e.target.value);
+    if (e.key === "Enter") {
+      setFilter(e.target.value);
+    }
+  }
+  console.log(setFilter);
+  return (
+    <section>
+      <div className="search">
+        <input
+          type="text"
+          name="name"
+          placeholder="Tapez ici votre ville"
+          onKeyPress={handleKeyDown}
+        />
+      </div>
+      <div class="bg-animation">
+        <div id="stars"></div>
+        <div id="stars2"></div>
+        <div id="stars3"></div>
+        <div id="stars4"></div>
+      </div>
+      <div className="planet">
+        <div class="planet-container">
+          <div class="night"></div>
+          <div class="day"></div>
+          <div class="clouds"></div>
+          <div class="inner-shadow"></div>
+        </div>
+      </div>
+    </section>
+  );
+}
