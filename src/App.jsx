@@ -1,6 +1,9 @@
 import "./App.css";
-import MainComponent from "@components/MainComponent";
+import ContactForm from "@components/ContactForm";
+
 
 export default function App() {
-  return <MainComponent />;
+  return (
+  <ContactForm/>
+  );
 }
