@@ -71,22 +71,25 @@ export default function MainComponent() {
                 <li key={item.city}></li>
                 <li>
                   <img
-                    src="https://img.icons8.com/external-smashingstocks-circular-smashing-stocks/65/000000/external-wind-weather-smashingstocks-circular-smashing-stocks.png"
+                    src="https://img.icons8.com/external-flaticons-flat-flat-icons/64/000000/external-ecology-renewable-energy-flaticons-flat-flat-icons.png"
                     className="center"
                   />
                   <br />
                   Indice de Qualité de l'Air | {item.AQI}
                 </li>
+                <li>
+                  Qualité de l'air à {item.placeName} | {item.aqiInfo.category}
+                </li>
+                <li>
+                  Concentration de l'air à {item.placeName} |{" "}
+                  {item.aqiInfo.concentration}
+                </li>
+                <li>
+                  Polluant dans l'air de {item.placeName} |{" "}
+                  {item.aqiInfo.pollutant}
+                </li>
                 <li>Monoxyde de Carbonne | {item.CO}</li>
                 <li>Couche d'Ozone | {item.OZONE}</li>
-                <li>
-                  Particules en suspension
-                  <br /> inférieur à 2,5 um | {item.PM10}
-                </li>
-                <li>
-                  Particules en suspension
-                  <br /> inférieur à 10 um | {item.PM25}
-                </li>
                 <li>Dioxyde de Sulfure | {item.SO2}</li>
                 <li>Dioxyde de Nitrogène | {item.NO2}</li>
               </div>
