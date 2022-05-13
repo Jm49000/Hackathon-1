@@ -17,6 +17,7 @@ specifiers:
   react: ^18.0.0
   react-dom: ^18.1.0
   react-router-dom: ^6.3.0
+  reactjs-popup: ^2.0.5
   sass: ^1.51.0
   vite: ^2.8.0
 
@@ -25,6 +26,7 @@ dependencies:
   react: 18.1.0
   react-dom: 18.1.0_react@18.1.0
   react-router-dom: 6.3.0_ef5jwxihqo6n7gxfmzogljlgcm
+  reactjs-popup: 2.0.5_ef5jwxihqo6n7gxfmzogljlgcm
   sass: 1.51.0
 
 devDependencies:
@@ -2012,6 +2014,17 @@ packages:
     engines: {node: '>=0.10.0'}
     dependencies:
       loose-envify: 1.4.0
+    dev: false
+
+  /reactjs-popup/2.0.5_ef5jwxihqo6n7gxfmzogljlgcm:
+    resolution: {integrity: sha512-b5hv9a6aGsHEHXFAgPO5s1Jw1eSkopueyUVxQewGdLgqk2eW0IVXZrPRpHR629YcgIpC2oxtX8OOZ8a7bQJbxA==}
+    engines: {node: '>=10'}
+    peerDependencies:
+      react: '>=16'
+      react-dom: '>=16'
+    dependencies:
+      react: 18.1.0
+      react-dom: 18.1.0_react@18.1.0
     dev: false
 
   /readdirp/3.6.0:

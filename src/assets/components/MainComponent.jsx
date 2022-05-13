@@ -1,7 +1,6 @@
 import "../components/sass/MainComponent.scss";
 import { useState, useEffect } from "react";
-import axios from "axios";
-import Modal from "./Modal";
+
 export default function MainComponent() {
   const [arrayIq, setArrayIq] = useState([]);
   const [filter, setFilter] = useState("");
