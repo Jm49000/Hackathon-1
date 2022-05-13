@@ -4,7 +4,7 @@
   opacity: 100%;
   position: absolute;
   top: 45%;
-  left: 10%;
+  left: 6%;
   transform: translate(-50%, -50%);
   z-index: 999;
   padding: 20px 40px;
@@ -160,8 +160,8 @@
   background: linear-gradient(-30deg, #000000);
   opacity: 100%;
   position: absolute;
-  top: 95%;
-  left: 20%;
+  top: 80%;
+  left: 15%;
   transform: translate(-50%, -50%);
   z-index: 999;
   padding: 10px 20px;
@@ -310,7 +310,6 @@
     transform: translateY(100%);
   }
 }
-
 @media screen and (min-width: 500px) {
   .animated-button1 {
     top: 44%;
@@ -319,7 +318,7 @@
   }
   .buttonContact {
     position: absolute;
-    top: 90%;
+    top: 80%;
     left: 41%;
   }
 }
