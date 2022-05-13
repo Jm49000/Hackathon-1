@@ -22,25 +22,8 @@
   /* -webkit-box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5); */
   border-radius: 5px;
-  animation: zoom-in-zoom-out 2s ease-out infinite;
 }
-/* .animated-button1:hover {
-  transform: scale(2);
-} */
-@keyframes zoom-in-zoom-out {
-  0% {
-    transform: scale(0, 0);
-  }
-  20% {
-    transform: scale(0.5, 0.5);
-  }
-  50% {
-    transform: scale(1, 1);
-  }
-  100% {
-    transform: scale(1.5, 1.5);
-  }
-}
+
 .animated-button1::before {
   content: "";
   position: absolute;
